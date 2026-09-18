@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Mastermind Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-glow blob-1"></div>
+  <div class="bg-glow blob-2"></div>
 
+  <div class="quiz-card">
+    <!-- Header Controls -->
+    <div class="card-header">
+      <div class="category-badge" id="category-badge">General Knowledge</div>
+      <button id="sound-btn" class="icon-btn" title="Toggle Sound">🔊</button>
+    </div>
+
+    <!-- Start View -->
+    <div id="start-view" class="view">
+      <div class="hero-icon">💡</div>
+      <h1>Quiz Master</h1>
+      <p class="subtitle">Test your knowledge across science, tech, and history!</p>
+      
+      <div class="input-group">
+        <label>Select Category</label>
+        <select id="category-select" class="custom-select">
+          <option value="tech">💻 Technology & Coding</option>
+          <option value="science">🔬 Science & Nature</option>
+          <option value="history">📜 History & World</option>
+        </select>
+      </div>
+
+      <button id="start-btn" class="btn primary-btn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz View -->
+    <div id="quiz-view" class="view hide">
+      <div class="stats-bar">
+        <div class="timer-box">
+          <span class="timer-icon">⏳</span>
+          <span id="timer">15</span>s
+        </div>
+        <div class="score-tracker">
+          Score: <span id="current-score">0</span>
+        </div>
+      </div>
+
+      <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <h2 id="question-text" class="question-text">Question goes here?</h2>
+
+      <div id="options-grid" class="options-grid"></div>
+
+      <div class="card-footer">
+        <span id="question-count">Question 1 of 5</span>
+      </div>
+    </div>
+
+    <!-- Results View -->
+    <div id="result-view" class="view hide">
+      <div id="result-icon" class="result-icon">🏆</div>
+      <h2 id="result-title">Quiz Completed!</h2>
+      
+      <div class="final-score-card">
+        <span class="score-label">Final Score</span>
+        <div class="score-value"><span id="final-score">0</span> / <span id="total-questions">5</span></div>
+        <p id="feedback-text" class="feedback-text">Great job!</p>
+      </div>
+
+      <button id="restart-btn" class="btn primary-btn">Play Again</button>
+    </div>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
