@@ -1,1 +1,24 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quick Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2 id="question">Question Text</h2>
+    <div id="answer-buttons" class="btn-grid">
+      <button class="btn">Option 1</button>
+      <button class="btn">Option 2</button>
+      <button class="btn">Option 3</button>
+      <button class="btn">Option 4</button>
+    </div>
+    <div id="score-container" class="hide">
+      <h3>Your Score: <span id="score">0</span> / <span id="total">0</span></h3>
+      <button onclick="location.reload()">Restart</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
