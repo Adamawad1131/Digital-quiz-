@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Quick Quiz App</title>
-  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="quiz-container">
-    <h2 id="question">Question Text</h2>
-    <div id="answer-buttons" class="btn-grid"></div>
+  <div class="quiz-card">
+    <div id="quiz-box">
+      <h2 id="question">Loading question...</h2>
+      <div id="answer-buttons" class="btn-grid"></div>
+    </div>
+    
     <div id="score-container" class="hide">
-      <h3>Your Score: <span id="score">0</span> / <span id="total">0</span></h3>
-      <button onclick="location.reload()" class="btn">Restart</button>
+      <h2>Quiz Completed!</h2>
+      <p class="score-text">You scored <span id="score">0</span> out of <span id="total">0</span></p>
+      <button onclick="location.reload()" class="btn restart-btn">Play Again</button>
     </div>
   </div>
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
